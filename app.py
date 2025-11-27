@@ -157,15 +157,15 @@ with col_slider:
 
 # --- Analysis & Results ---
 if analyze:
-        if not text.strip():
-            st.warning("請先輸入一段文字。")
-        elif len(text) < min_len:
-            st.markdown(
-                f"<div style='background-color: #fff3cd; color: black; padding: 1rem; border-radius: 0.5rem;'>"
-                f"目前字數約 {len(text)}，少於建議長度 {min_len}，偵測結果可能不太可靠。"
-                f"</div>",
-                unsafe_allow_html=True
-            )
+    if not text.strip():
+        st.warning("請先輸入一段文字。")
+    elif len(text) < min_len:
+        st.markdown(
+            f"<div style='background-color: #fff3cd; color: black; padding: 1rem; border-radius: 0.5rem;'>"
+            f"目前字數約 {len(text)}，少於建議長度 {min_len}，偵測結果可能不太可靠。"
+            f"</div>",
+            unsafe_allow_html=True
+        )
     else:
         # --- Custom Spinner Logic ---
         spinner_placeholder = st.empty()
